@@ -1,9 +1,9 @@
 <?php
 session_start();
-$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['user_id'] = isset($_POST['user_id']) ? $_POST['user_id'] : "";
 ?>
 <?php
-if($_POST['login-btn']=="login-submit"){
+if($_POST['login-btn'] = isset($_POST['user_id']) ? $_POST['user_id'] : ""=="login-submit"){
   if($_POST['username']!="" && $_POST['password']!=""){
     $username = strtolower($_POST['username']);
     include "connect.php";
